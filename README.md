@@ -7,3 +7,9 @@ Este repositório contém meus estudos e projetos desenvolvidos no GitHub.
 ## Apps usados:
 * Mimo 
 * Editor spck;
+## Esses são os meus projetos
+* Mercado livre FAKE
+## https://renansoare1502-sys.github.io/projetos-github/
+* Spotify FAKE
+## https://renansoare1502-sys.github.io/projetos-github/projeto2.html
+
