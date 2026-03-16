@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de velocidade</title>
+  
+  <style>
+    .container{
+  display: grid;
+  justify-content: center;
+  aling-items: center;
+  margin-top: 200px;
+  border: solid 2px black;
+  border-radius: 30px;
+  text-aling: center;
+  padding-top: 30px;
+  background-color: white;
+}
+body{
+  background-color: yellow;
+}
+input{
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+p{
+  text-align: center;
+  border: solid 1px black;
+  margin-top: 5px;
+  padding: 8px;
+  padding-right: 4px;
+  padding-left: 4px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+h3{
+  text-align: center;
+  margin-top: 40px;
+}
+button{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.meu-botao{
+  box-shadow: 0 7px gray;
+  transform: all 0,5;
+  cursor: pointer;
+  border: none;
+}
+.meu-botao:active {
+  box-shadow: 0 2px gray;
+  transform: translateY(4px);
+}
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Medidor de Velocidade</h1>
+    <input type="number" id="velocidade" Placeholder="2.km">
+  <button class="meu-botao" onclick="verificarVelocidade()">Verificar</button>
+    <h3>resultado<br>👇</h3>
+  <p id="mensagem"></p>
+  </div>
+  <script>
+  function verificarVelocidade() {
+  let veloz = document.getElementById ("velocidade").value;
+   let tela = document.getElementById ("mensagem");
+  
+     for (let i = 2; i >= 0; i--){
+       if (veloz == i) {
+         tela.innerHTML = "Parado";
+         tela.style.color ="blue";
+         break;
+       }
+     }
+  for (let i = 29; i >= 2; i--){
+    if (veloz == i){
+      tela.innerHTML ="Velocidade: Muito devagar"
+      tela.style.color ="skyblue";
+    }
+  }
+      for (let i = 59; i >= 29; i--){
+        if (veloz == i){
+          tela.innerHTML = "Velocidade: Devagar";    
+          tela.style.color ="green";
+          break;
+        }
+      }
+  for (let i = 79; i >= 59; i--){
+    if (veloz == i){
+      tela.innerHTML ="Velocidade: Media";
+      tela.style.color ="orange";
+      break;
+    }
+  }
+  for (let i = 120; i >= 79; i--){
+    if (veloz == i){
+      tela.innerHTML ="Velocidade: Rápida";
+      tela.style.color ="darkred";
+    }
+  }
+   for (let i = 120; i >= 120; i--){
+     if (veloz == i){
+       tela.innerHTML ="Velocidade: Muito rapida";
+       tela.style.color ="red";
+     }
+   } 
+  for (let i = 400; i >= 100; i--){
+    if (veloz == i){
+      tela.innerHTML ="Velocidade: Ultra Rapida";
+      tela.style.color = "red";
+      break;
+    }
+  }
+  for (let i = 100000; i >= 400; i--){
+    if (veloz == i){
+      tela.innerHTML ="VOCÊ SUMIU 💀"
+      tela.style.color ="red";
+      break;
+    }
+  }
+     
+  
+  
+  }
+  </script>
+</body>
+</html>
