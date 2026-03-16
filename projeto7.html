@@ -105,19 +105,8 @@ button{
   const input2 = document.getElementById("email").value;
   let tela = document.getElementById("mensagem");
   let container = document.getElementById("container");
- let Senha = "1357"; 
-  let emails = "renan";
-
-  if (input2 !== emails) {
-    tela.innerHTML="E-mail inserido Incorreto "
-    tela.style.color="darkred" 
-  } else if (input !== Senha) {
-    tela.innerHTML = "Senha Incorreta!";
-    tela.style.color="red";
-  } else{
-  container.innerHTML ='<div id="container2"><h1>Agora faça o seu login para salvar suas informações no app</h1><p><input type="text" placeholder="Nome"><p><input type="text" placeholder="Sobrenome"><p><input type="number" id="idade" placeholder="Data de nascimento"><p><button onclick="AcessarSite()"> Continuar</button><p id="mensagem2"></p></div>';
+ container.innerHTML ='<div id="container2"><h1>Agora faça o seu login para salvar suas informações no app</h1><p><input type="text" placeholder="Nome"><p><input type="text" placeholder="Sobrenome"><p><input type="number" id="idade" placeholder="Data de nascimento"><p><button onclick="AcessarSite()"> Continuar</button><p id="mensagem2"></p></div>';
   }
-}
 function AcessarSite() {
   let container2 = document.getElementById("container2"); 
  
