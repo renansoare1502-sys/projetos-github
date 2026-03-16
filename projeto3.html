@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  .container{
+  border: solid 1px black;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 40px;
+  display: grid;
+  justify-items: center;
+  margin-top: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+  border: solid 3px black;
+}
+body{
+  background-color: lightyellow;
+}
+
+input{
+  padding: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button{
+  margin-left: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  padding-right: 80px;
+  padding-left: 80px;
+  background-color: skyblue;
+  border-radius: 5px;
+}
+tela.style.color{
+  text-align: center;
+}
+Placeholder{
+  text-align: center;
+}
+/* Cor original do botão */
+.meu-botao {
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px darkblue;
+  transition: all 0,1; /* Transição suave */
+}
+
+/* Cor ao clicar */
+.meu-botao:active {
+  background-color: orange; /* Nova cor */
+  box-shadow: 0 2px darkblue;
+  transform: translateY(4px);
+}
+
+
+ </style>
+</head>
+<body>
+  <div class="container">
+  <h1>Verificador de idade</h1>
+  <input type="number" id="idade" />
+  <button onclick="VerificarIdade()"> Verificar</button>
+  <p id="mensagem"></p>
+  </div>
+  <script>
+function VerificarIdade() {
+let idade = document.getElementById ("idade").value;
+let tela = document.getElementById ("mensagem");
+
+  if (idade == "") {
+        tela.textContent = "Por favor, digite sua idade.";
+        tela.style.color = "orange";
+    } 
+
+  
+  for (let i = 11; i >= 0; i--) {
+    if (idade == i) {
+        tela.innerHTML = "Você é uma criança";
+        tela.style.color = "green";
+        break; 
+}
+  }
+for (let i = 12; i <= 18; i++){
+   if (idade == i){
+     tela.innerHTML = "Você é um adolescente";
+     tela.style.color = "blue";
+     break;
+   }
+}
+ for (let i = 18; i <= 59; i++){
+    if (idade == i){
+      tela.innerHTML = "Você é um adulto";
+      tela.style.color = "orange";
+      break;
+    }
+}
+  for (let i = 60; i <= 100; i++){
+  if (idade == i) {
+    tela.innerHTML ="Você é um idoso";
+    tela.style.color ="red";
+  }
+}
+    for (let i = 100; i <= 1000; i++){
+    if (idade == i){
+      tela.innerHTML = "Você já ta morto 💀";
+      tela.style.color = "darkred";
+      break;
+    }
+  }
+}
+ </script>
+</body>
+</html>
