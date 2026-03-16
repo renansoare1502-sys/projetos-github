@@ -1,12 +1,8 @@
 # Meu Portfólio de Projetos
 Este repositório contém meus estudos e projetos desenvolvidos no GitHub.
-
-## Tecnologias utilizadas:
+## Tecnologias utilizadas nesses projetos pequenos:
 * HTML e CSS
 * Javascript
-## Apps usados:
-* Mimo 
-* Editor spck;
 ## Esses são os meus projetos
 ## Mercado livre FAKE
 * https://renansoare1502-sys.github.io/projetos-github/
