@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shopee (fake)</title>
+  <style>
+   .spiner{
+  width: 45px;
+  height: 45px;
+  border: 8px solid gray;
+  border-top: 8px solid blue;
+  border-radius: 100%;
+  animation:spin 1s linear infinite;
+  margin-left: 175px;
+}
+  @keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+#container{
+  text-align: center;
+  background: white;
+  color: black;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+}
+.container {
+  margin: auto;
+}
+ .input-field{
+  padding-left: 3px;
+  box-sizing: border-box ;
+   margin-top: 50px;
+}
+
+h1{ 
+  margin-left: 15px;
+  margin-top: 60px;
+  text-align: left;
+  font-size: 40px;
+  margin-bottom: 150px;
+  color: darkorange;
+  font-family: sans-serif; Arial;
+}
+input{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 95%;
+}
+button{
+  width: 97%;
+  background: darkorange;
+  color: white;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+.meuBotao{
+  box-shadow: 0 7px darkred;
+  transform: all 0,1;
+}
+.meuBotao:active{
+   box-shadow: 0 1px darkred;
+  transform: translateY(4px);
+}
+
+
+
+
+
+ 
+  </style>
+</head>
+<body>
+  <div class="color">
+  </div>
+  <div id="container">
+  <h1>Shopee</h1>
+  <p></p><p></p>
+      <p></p>
+    <div id="input-field">
+    <input type="text" id="nome" placeholder="nome"/><p></p>
+    <input type="text" id="Sobrenome" placeholder="Sobrenome "/>
+    <p></p>
+    <input type="text" id="email" Placeholder="Celular ou E-mail"/><p></p>
+    <input type="number" id="Senha" Placeholder="Nova senha"/>
+  <p></p>
+    </div>
+    <button class="meuBotao" onclick="FazerCadastro()">Continuar</button>
+    <p id="mensagem"></p>
+  </div>
+  <script>
+    function FazerCadastro() {
+  const input = document.getElementById("Senha").value;
+  const input2 = document.getElementById("email").value;
+  let tela = document.getElementById("mensagem");
+  let container = document.getElementById("container");
+ let Senha = "1357"; 
+  let emails = "renan";
+
+  if (input2 !== emails) {
+    tela.innerHTML="E-mail inserido Incorreto "
+    tela.style.color="darkred" 
+  } else if (input !== Senha) {
+    tela.innerHTML = "Senha Incorreta!";
+    tela.style.color="red";
+  } else{
+  container.innerHTML ='<div id="container2"><h1>Agora faça o seu login para salvar suas informações no app</h1><p><input type="text" placeholder="Nome"><p><input type="text" placeholder="Sobrenome"><p><input type="number" id="idade" placeholder="Data de nascimento"><p><button onclick="AcessarSite()"> Continuar</button><p id="mensagem2"></p></div>';
+  }
+}
+function AcessarSite() {
+  let container2 = document.getElementById("container2"); 
+ 
+  let idade = document.getElementById("idade")
+.value;
+  let mensagem = document.getElementById("mensagem2");
+  if (idade < "18"){
+    mensagem2.innerHTML="Menos de 18 anos não pode entrar";
+    mensagem2.style.color="red";
+  } else {
+     mensagem2.innerHTML="<div class='spiner'>"
+  } 
+
+}
+
+
+  </script>
+</body>
+</html>
