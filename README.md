@@ -16,6 +16,6 @@ Este repositório contém meus estudos e projetos desenvolvidos no GitHub.
 * https://renansoare1502-sys.github.io/projetos-github/projeto6.html
 ## Shopee FAKE
 * https://renansoare1502-sys.github.io/projetos-github/projeto7.html
-  OBS: O email é: renan
+  OBS: O email é: renan.
        A senha é: 1357
 
