@@ -13,5 +13,5 @@ Este repositório contém meus estudos e projetos desenvolvidos no GitHub.
 ## Spotify FAKE
 * https://renansoare1502-sys.github.io/projetos-github/projeto2.html
 ## Verificador de idade
-*https://renansoare1502-sys.github.io/projetos-github/projeto3.html
+* https://renansoare1502-sys.github.io/projetos-github/projeto3.html
 
