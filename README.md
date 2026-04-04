@@ -15,4 +15,5 @@ Este repositório contém meus estudos e projetos desenvolvidos no GitHub.
 ## Calculadora
 * https://renansoare1502-sys.github.io/projetos-github/projeto6.html
 ## Gerenciador de tarefas
-*  https://renansoare1502sys.github.io/projetos-github/projeto8.html
+*  https://renansoare1502
+*  sys.github.io/projetos-github/projeto8.html
