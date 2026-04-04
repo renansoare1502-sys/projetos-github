@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerenciador de Tarefas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .container {
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    input {
+      text-align: center;
+      margin-left: 100px;
+    }
+    
+    button {
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding-left: 80px;
+      padding-right: 82px;
+      margin-left: 100px;
+      border: none;
+      
+    }
+    
+    #data {
+      margin-left: 100px;
+      padding-left: 50px;
+      padding-right: 5px;
+    }
+    
+    h3 {
+      margin-left: 65px;
+    }
+    
+    #bd {
+      margin-left: 75px;
+      background: skyblue;
+      color: black;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      
+    }
+    
+    #btn2 {
+      margin-left: 75px;
+      background: indianred;
+      color: white;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    #Tr{
+      margin-left: 75px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <h1>to-do-list</h1>
+    <p id="P"></p>
+    <button id="Tr" onclick="Tr()">Trocar tarefas</button>
+    <p><input type="date" id="data"></p>
+    <input type="text" id="tarefa">
+    <br>
+    <button onclick="Click()">Feito</button>
+    <p></p>
+    <input type="text" id="tarefa2">
+    <br>
+    <button onclick="Click2()">Feito</button>
+    <p></p>
+    <input type="text" id="tarefa3">
+    <br>
+    <button onclick="Click3()">Feito</button>
+    <p></p>
+    <input type="text" id="tarefa4">
+    <br>
+    <button onclick="Click4()">Feito</button>
+    <p></p>
+    <input type="text" id="tarefa5">
+    <br>
+    <button onclick="Click5()">Feito</button>
+    <p></p>
+    <input type="text" id="tarefa6">
+    <br>
+    <button onclick="Click6()">Feito</button>
+    <p></p>
+    <input type="text" id="tarefa7">
+    <br>
+    <button onclick="Click7()">Feito</button>
+    <p></p>
+    <p id="Resul"></p>
+    
+  </div>
+  <script>
+    let P = document.getElementById("#P")
+    let data = document.querySelector("#data")
+    let tela = document.querySelector("#tarefa")
+    let tela2 = document.querySelector("#tarefa2")
+    let tela3 = document.querySelector("#tarefa3")
+    let tela4 = document.querySelector("#tarefa4")
+    let tela5 = document.querySelector("#tarefa5")
+    let tela6 = document.querySelector("#tarefa6")
+    let tela7 = document.querySelector("#tarefa7")
+    let resul = document.getElementById("Resul")
+    let btn2 = document.getElementById("#bd2")
+    
+    function Click() {
+      tela.style.textDecoration = " line-through"
+      tela.readOnly = true
+    }
+    
+    function Click2() {
+      tela2.style.textDecoration = " line-through"
+      tela2.readOnly = true
+    }
+    
+    function Click3() {
+      tela3.style.textDecoration = " line-through"
+      tela3.readOnly = true
+    }
+    
+    function Click4() {
+      tela4.style.textDecoration = " line-through"
+      tela4.readOnly = true
+    }
+    
+    function Click5() {
+      tela5.style.textDecoration = " line-through"
+      tela5.readOnly = true
+    }
+    
+    function Click6() {
+      tela6.style.textDecoration = " line-through"
+      tela6.readOnly = true
+    }
+    
+    function Click7() {
+      tela7.style.textDecoration = " line-through"
+      tela7.readOnly = true
+      resul.innerHTML = "<h3>Todas as tarefas estão feitas?</h3><p><button id='bd'onclick='ClickF()'>Confirmar : Sim</button><p><button id='btn2'onclick='ClickN()'>Confirmar : Não</button>"
+    }
+    
+    function ClickF() {
+      data.style.textDecoration = "line-through"
+      data.readOnly = true
+      alert("✨️PARABENS✨️Sua dedicação é muito grande")
+    }
+    
+    function ClickN() {
+      alert("Conclua todas as tarefas primeiro")
+      data.readOnly = false
+      data.style.textDecoration = "none"
+    }
+    
+    function Tr() {
+      tela.readOnly = false
+      tela.style.textDecoration = "none"
+      tela2.readOnly = false
+      tela2.style.textDecoration = "none"
+      tela3.readOnly = false
+      tela3.style.textDecoration = "none"
+      tela4.readOnly = false
+      tela4.style.textDecoration = "none"
+      tela5.readOnly = false
+      tela5.style.textDecoration = "none"
+      tela6.readOnly = false
+      tela6.style.textDecoration = "none"
+      tela7.readOnly = false
+      tela7.style.textDecoration = "none"
+    }
+  </script>
+</body>
+
+</html>
