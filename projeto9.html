@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto</title>
+  <style>
+    button{
+      width: 100%;
+      padding: 10px;
+      border-radius: 30px;
+      border: none;
+    }
+    #cor{
+      background: deepskyblue;
+      color: white;
+    }
+  </style>
+</head>
+
+<body id="bd">
+  <div id="container">
+    <h1>Escolha uma tema</h1>
+    <button onclick="tema()">Escolha um tema (o tema é permanente)</button>
+    <p id="resul"></p>
+  </div>
+  <script>
+    let resul = document.getElementById("resul")
+    let body = document.querySelector("bd")
+    
+    function tema() {
+      resul.innerHTML = "<button id='cor' onclick='Claro()'>Claro</button><p><button id='cor'onclick='Escuro()'>Escuro</button><p><button id='cor'onclick='Azul()'>Azul</button><p><button id='cor'onclick='Vermelho()'>Vermelho</button><p><button onclick='Amarelo()'id='cor'>Amarelo</button><p><button id='cor'onclick='Verde()'>Verde</button><p><button id='cor'onclick='Rosa()'>Rosa</button><p><button id='cor'onclick='Roxo()'>Roxo</button>"
+    }
+    
+    function Claro() {
+      bd.style.background = "white"
+      bd.style.color = "black"
+    }
+    
+    function Escuro() {
+      bd.style.background = "black"
+      bd.style.color = "white"
+    }
+    
+    function Azul() {
+      bd.style.background = "skyblue"
+      bd.style.color = "black"
+    }
+    
+    function Vermelho() {
+      bd.style.background = "lightcoral"
+      bd.style.color = "black"
+    }
+    
+    function Amarelo() {
+      bd.style.background = "lightyellow"
+      bd.style.color = "black"
+    }
+    
+    function Verde() {
+      bd.style.background = "lightgreen"
+      bd.style.color = "black"
+    }
+    
+    function Rosa() {
+      bd.style.background = "pink"
+      bd.style.color = "black"
+    }
+    
+    function Roxo() {
+      bd.style.background = "purple"
+      bd.style.color = "black"
+    }
+  </script>
+</body>
+
+</html>
