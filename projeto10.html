@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia dos Pais! ❤️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #0f172a, #1e1b4b, #1e3a8a, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientBg 15s ease infinite;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 40px 20px;
+    }
+
+    @keyframes gradientBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 550px;
+      width: 100%;
+      position: relative;
+    }
+
+    .icon-header {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: inline-block;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    h1 { 
+      color: #ffffff; 
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .subtitulo {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #0284c7, #4f46e5);
+      color: white;
+      border: none;
+      padding: 18px 36px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      width: 100%;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+
+    button:hover { 
+      background: linear-gradient(135deg, #0369a1, #4338ca);
+      transform: scale(1.02);
+    }
+
+    /* Carta Longa que aparece depois */
+    .oculto { 
+      display: none;
+      color: #cbd5e1; 
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-top: 15px;
+      text-align: left;
+      animation: aparecer 0.8s ease forwards;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .destaque {
+      color: #34d399;
+      font-weight: bold;
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .paragrafo-carta {
+      margin-bottom: 15px;
+      text-indent: 15px;
+    }
+
+    /* Efeito de confetes em CSS */
+    .confete {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      animation: cair 2.5s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes cair {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <div class="icon-header">💙</div>
+    <h1>Querido Pai,</h1>
+    <p id="subtitulo-inicial" class="subtitulo">Preparei uma surpresa especial para o senhor. Clique no botão abaixo para abrir:</p>
+    
+    <button id="btn-surpresa" onclick="surpresaDiaDosPais()">✨ Ler Minha Mensagem</button>
+    
+    <div id="mensagem-secreta" class="oculto">
+      <span class="destaque">🎉 Feliz Dia dos Pais! 🎉</span>
+      
+      <p class="paragrafo-carta">Olhando para trás, percebo que cada passo que dei na minha vida foi guiado pela segurança dos seus conselhos e pelo exemplo de integridade que o senhor sempre demonstrou. Mais do que um pai, o senhor é a minha maior referência de força, dedicação e amor incondicional.</p>
+      
+      <p class="paragrafo-carta">Obrigado por todas as vezes em que segurou minha mão, pelas noites de conversa, pelos sacrifícios silenciosos que fez para garantir o meu futuro e por me ensinar a levantar sempre com a cabeça erguida diante de qualquer desafio. Seu apoio é a base de tudo o que sou e de tudo o que ainda aspiro ser.</p>
+      
+      <p class="paragrafo-carta">Dizem que a tecnologia aproxima as pessoas, mas nada supera o calor do seu abraço e a certeza de que posso contar com o senhor em qualquer momento do meu dia. O senhor é o meu porto seguro, meu herói da vida real e o meu melhor amigo.</p>
+      
+      <p class="paragrafo-carta" style="text-align: center; font-weight: bold; color: #ffffff; margin-top: 25px;">Te amo além do infinito! ❤️</p>
+    </div>
+  </div>
+
+  <script>
+    function surpresaDiaDosPais() {
+      const btn = document.getElementById('btn-surpresa');
+      const subtitulo = document.getElementById('subtitulo-inicial');
+      const msg = document.getElementById('mensagem-secreta');
+      
+      // Esconde o botão e o subtítulo introdutório
+      btn.style.display = 'none';
+      subtitulo.style.display = 'none';
+      
+      // Mostra a carta emocionante com efeito suave
+      msg.style.display = 'block';
+      
+      // Dispara a chuva de confetes festiva
+      gerarConfetes();
+    }
+
+    function gerarConfetes() {
+      const cores = ['#38bdf8', '#818cf8', '#34d399', '#fbbf24', '#f43f5e'];
+      const card = document.getElementById('card');
+
+      // Gera 50 pedacinhos de confete espalhados
+      for (let i = 0; i < 50; i++) {
+        const confete = document.createElement('div');
+        confete.classList.add('confete');
+        
+        confete.style.left = Math.random() * 100 + '%';
+        confete.style.background = cores[Math.floor(Math.random() * cores.length)];
+        confete.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+        confete.style.width = (Math.random() * 10 + 6) + 'px';
+        confete.style.height = confete.style.width;
+
+        card.appendChild(confete);
+
+        // Limpa a memória deletando os confetes antigos
+        setTimeout(() => confete.remove(), 2500);
+      }
+    }
+  </script>
+
+</body>
+</html>
